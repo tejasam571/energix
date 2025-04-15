@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../static/img/icon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Add Bill</title>
+</head>
+<body class="bg-gray-100 h-screen overflow-x-hidden">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="bg-gray-800 text-white w-64 flex flex-col fixed h-[100vh] justify-between">
+            <div>
+                <div class="flex justify-center items-center mb-6 border-b-2">
+                    <img src="../static/img/logo.png" alt="Logo" class="w-20 h-20 rounded-full">
+                    <h2 class="text-center text-l font-semibold">Admin Dashboard</h2>
+                </div>
+               
+                <ul class="mt-6">
+                    <li class="mb-4 px-4 py-2 hover:bg-gray-700 rounded">
+                        <a href="/dashboard" class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M3 3h8v8H3V3zm10 0h8v4h-8V3zm0 6h8v12h-8V9zM3 13h8v8H3v-8z"/>
+                            </svg>
+                                                        
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="mb-4 px-4 py-2 hover:bg-gray-700 rounded">
+                        <a href="/add_meter" class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                            </svg>
+                            Add Meter Board
+                        </a>
+                    </li>
+                    <li class="mb-4 px-4 py-2 hover:bg-gray-700 rounded">
+                        <a href="/view_meter_boards" class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                            View Meters
+                        </a>
+                    </li>
+                    <li class="mb-4 px-4 py-2 hover:bg-gray-700 rounded">
+                        <a href="/add_bill" class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                            </svg>
+                            Electricity Bill
+                        </a>
+                    </li>
+                    <li class="mb-4 px-4 py-2 hover:bg-gray-700 rounded">
+                        <a href="/view_all_bills" class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                            View All Bills
+                        </a>
+                    </li>
+                    <li class="mb-4 px-4 py-2 hover:bg-gray-700 rounded">
+                        <a href="/total_power_consumption" class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                            Total Power Consumption
+                        </a>
+                    </li>
+                    <li class="mb-4 px-4 py-2 hover:bg-gray-700 rounded">
+                        <a href="/logout" class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                            </svg>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-center py-4 text-sm">© 2025 Your Company</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-6 ml-64">
+            <!-- Header Section -->
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-3xl font-bold">Pay Bill</h1>
+                <a href='/add_meter' class="bg-blue-600 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded">
+                    Add New Meter
+                </a>
+            </div>
+            <div class="max-w-4xl mx-auto mt-12 bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-200 pb-3">
+                    Pay Electricity Bill
+                </h2>
+                <form method="POST" action="/add_bill" class="grid grid-cols-3 gap-4">
+                    <div class="mb-4">
+                        <label for="meter_number" class="block text-sm font-medium text-gray-700 mb-1">
+                            Meter Number:
+                        </label>
+                        <select name="meter_number" id="meter_number" required 
+                            class="block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-700 py-2 px-3 placeholder-gray-500 border border-gray-300"
+                            onchange="fetchMeterDetails(this.value)">
+                            <option value="" selected>Select Meter Number</option>
+                            {% for meter in meter_numbers %}
+                            <option value="{{ meter }}">{{ meter }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+            
+                    <div class="mb-4">
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name:</label>
+                        <input type="text" id="name" 
+                            class="block w-full rounded-md border-gray-300 shadow-sm bg-gray-100 text-gray-700 py-2 px-3 placeholder-gray-500 border"
+                            readonly>
+                    </div>
+            
+                    <div class="mb-4">
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone:</label>
+                        <input type="text" id="phone" 
+                            class="block w-full rounded-md border-gray-300 shadow-sm bg-gray-100 text-gray-700 py-2 px-3 placeholder-gray-500 border"
+                            readonly>
+                    </div>
+            
+                    <div class="mb-4">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email:</label>
+                        <input type="text" id="email" 
+                            class="block w-full rounded-md border-gray-300 shadow-sm bg-gray-100 text-gray-700 py-2 px-3 placeholder-gray-500 border"
+                            readonly>
+                    </div>
+            
+                    <div class="mb-4">
+                        <label for="previous_reading" class="block text-sm font-medium text-gray-700 mb-1">Previous Reading:</label>
+                        <input type="text" id="previous_reading" value="0" 
+                            class="block w-full rounded-md border-gray-300 shadow-sm bg-gray-100 text-gray-700 py-2 px-3 placeholder-gray-500 border"
+                            readonly>
+                    </div>
+            
+                    <div class="mb-4">
+                        <label for="present_reading" class="block text-sm font-medium text-gray-700 mb-1">Present Reading:</label>
+                        <input type="number" name="present_reading" id="present_reading" required 
+                            class="block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-700 py-2 px-3 placeholder-gray-500 border"
+                            onblur="validateAndCalculate()">
+                    </div>
+            
+                    <div class="mb-4">
+                        <label for="total_units" class="block text-sm font-medium text-gray-700 mb-1">Total Units:</label>
+                        <input type="text" id="total_units" 
+                            class="block w-full rounded-md border-gray-300 shadow-sm bg-gray-100 text-gray-700 py-2 px-3 placeholder-gray-500 border"
+                            readonly>
+                    </div>
+            
+                    <div class="mb-6">
+                        <label for="total_amount" class="block text-sm font-medium text-gray-700 mb-1">Total Amount:</label>
+                        <input type="text" id="total_amount" 
+                            class="block w-full rounded-md border-gray-300 shadow-sm bg-gray-100 text-gray-700 py-2 px-3 placeholder-gray-500 border"
+                            readonly>
+                    </div>
+                    <div></div>
+            
+                    <button type="submit" 
+                        class="w-full bg-blue-600 text-white text-sm font-medium py-2 rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1">
+                        Generate Bill
+                    </button>
+                </form>
+            </div>
+            
+        </div>
+
+    <script>
+        function fetchMeterDetails(meterNumber) {
+            if (meterNumber) {
+                fetch(`/get_meter_details?meter_number=${meterNumber}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('name').value = data.name;
+                        document.getElementById('phone').value = data.phone;
+                        document.getElementById('email').value = data.email;
+                        document.getElementById('previous_reading').value = data.previous_reading;
+                    });
+            } else {
+                document.getElementById('name').value = '';
+                document.getElementById('phone').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('previous_reading').value = '0';
+            }
+        }
+
+        function validateAndCalculate() {
+            const previousReading = parseInt(document.getElementById('previous_reading').value) || 0;
+            const presentReadingField = document.getElementById('present_reading');
+            const presentReading = parseInt(presentReadingField.value) || 0;
+
+            // Validate present reading
+            if (presentReading < previousReading) {
+                alert("Present reading must be greater than or equal to the previous reading.");
+                presentReadingField.value = ''; // Clear invalid input
+                document.getElementById('total_units').value = '';
+                document.getElementById('total_amount').value = '';
+                presentReadingField.focus(); // Return focus to the input field
+            } else {
+                // Calculate total units and total amount
+                const totalUnits = presentReading - previousReading;
+                const totalAmount = totalUnits * 100; // 1 unit = 100 Rs
+
+                document.getElementById('total_units').value = totalUnits;
+                document.getElementById('total_amount').value = totalAmount;
+            }
+        }
+    </script>
+</body>
+</html>
